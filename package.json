@@ -1,0 +1,58 @@
+{
+  "name": "dsh-plugin-repo",
+  "version": "1.0.0",
+  "description": "Self-hosted plugin repository for DeepSeek Harness (DSH). Each device serves its own repo over HTTP (list/download/upload .tgz, detect non-official plugins), cross-device pull via another DSH's IP, version-aware confirm install, a '插件仓库' settings page, and repo_* model tools. Non-official only; official @deepseek-ai/* are never touched.",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "cordis",
+    "plugin",
+    "repository"
+  ],
+  "type": "module",
+  "main": "lib/index.mjs",
+  "types": "lib/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.mts",
+      "default": "./lib/index.mjs"
+    },
+    "./client": {
+      "types": "./lib/client.d.mts",
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "author": "Z-6354",
+  "license": "MIT",
+  "homepage": "https://github.com/Z-6354/dsh-plugin-repo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Z-6354/dsh-plugin-repo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Z-6354/dsh-plugin-repo/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/dsh-tools": "*",
+    "@deepseek-ai/schemastery": "*"
+  }
+}
