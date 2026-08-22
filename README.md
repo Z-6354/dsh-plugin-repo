@@ -11,12 +11,12 @@ Each device runs its own repo over HTTP: list / upload / download `.tgz`, detect
 dsh plugin --profile web add dsh-plugin-repo
 
 # or from a release tarball
-dsh plugin --profile web add ./dsh-plugin-repo-1.4.0.tgz
+dsh plugin --profile web add ./dsh-plugin-repo-1.5.2.tgz
 ```
 
 Restart DSH, then open **Settings → 插件仓库**. Prefer a hard refresh (`Ctrl+Shift+R`) after upgrades.
 
-## Settings UI (v1.4)
+## Settings UI (v1.5)
 
 | Tab | Purpose |
 | --- | --- |
@@ -25,7 +25,7 @@ Restart DSH, then open **Settings → 插件仓库**. Prefer a hard refresh (`Ct
 | **已安装** | Pack-upload installed non-official plugins into the local repo |
 | **高级** | Extra search roots for discovering plugins |
 
-Cross-device sync uses a dual pane (local | remote) and a mode switch so push selection stays on the sync page.
+Cross-device sync uses a dual pane (local | remote). Badges show concrete versions (`本机 1.5.2 > 对方 1.5.0`). Use **选需推送** / **选需拉取** to select only packages that differ (including **version unknown → default push**). Push confirms warn on downgrade; equal packages show as already synced. **最近推送** records persist under `repoDir/push-history.json` across restarts and explain whether remote was already unknown vs push stripped the version.
 
 ## Repository storage
 

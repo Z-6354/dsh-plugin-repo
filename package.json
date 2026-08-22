@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-repo",
-  "version": "1.4.0",
+  "version": "1.5.11",
   "description": "Self-hosted plugin repository for DeepSeek Harness (DSH). Each device serves its own repo over HTTP (list/download/upload .tgz, detect non-official plugins), cross-device pull/push, version-aware confirm install, a tabbed '插件仓库' settings page, and repo_* model tools. Non-official only; official @deepseek-ai/* are never touched.",
   "keywords": [
     "deepseek-harness",
